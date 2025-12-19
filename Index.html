@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article Layout</title>
+    <style>
+        /* Basic Reset */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .article-container {
+            max-width: 650px; /* Standard reading width */
+            width: 100%;
+        }
+
+        /* Category Label */
+        .category {
+            color: #C0392B; /* Deep Red */
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Headline - Using a Serif font for a news feel */
+        .headline {
+            font-family: 'Georgia', serif;
+            font-size: 2.2rem;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px 0;
+        }
+
+        /* Bylines */
+        .meta-info {
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .author {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Image Section */
+        .featured-image {
+            width: 100%;
+            display: block;
+            border-radius: 4px; /* Optional slight rounding */
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <article class="article-container">
+        <div class="category">Family Ties</div>
+        
+        <h1 class="headline">
+            Peter Offiong daughters take on growing leadership roles as billionaire tycoon steps back
+        </h1>
+
+        <div class="meta-info">
+            By <span class="author">‘Femi Asu</span><br>
+            Posted on December 19, 2025 14:31
+        </div>
+
+        <img src="YOUR_IMAGE_URL_HERE" alt="Dangote Daughters" class="featured-image">
+        
+        <p class="caption">
+            From left to right: Halima, Fatima and Mariya Dangote. &copy; All right reserved
+        </p>
+    </article>
+
+</body>
+</html>
