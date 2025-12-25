@@ -3,12 +3,12 @@ backend:
   name: github
   repo: p3xcnrtm/artico # CORRECTED FORMAT
   auth_provider: auth0
-  auth_config:
-    auth_url: https://dev-bqp82821q78s4ipi.us.auth0.com/authorize
-    app_id: EWGpqJNd2RbCUGTD28dW7b5aYKOR0wX8
-    API_URL: https://dev-bqp82821q78s4ipi.us.auth0.com/api/v2/
-    audience: https://articorp-api.com
-    scope: openid email profile
+ auth_config:
+  auth_url: https://{{ site.data.env.AUTH0_DOMAIN }}/authorize
+  app_id: {{ site.data.env.AUTH0_CLIENT_ID }}
+  API_URL: https://{{ site.data.env.AUTH0_DOMAIN }}/api/v2/
+  audience: {{ site.data.env.AUTH0_AUDIENCE }}
+  scope: openid email profile
   base_url: https://api.netlify.com
   branch: main
 # END: NEW BACKEND CONFIGURATION
