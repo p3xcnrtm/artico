@@ -1,24 +1,23 @@
 # START: NEW BACKEND CONFIGURATION
 backend:
   name: github
-  repo: https://p3xcnrtm.github.io/artico/ # E.g., user/articorp-blog
+  repo: p3xcnrtm/artico # CORRECTED FORMAT
   auth_provider: auth0
   auth_config:
-    auth_url: https://dev-bqp82821q78s4ipi.us.auth0.com/authorize # E.g., https://dev-xxxxx.us.auth0.com/authorize
+    auth_url: https://dev-bqp82821q78s4ipi.us.auth0.com/authorize
     app_id: EWGpqJNd2RbCUGTD28dW7b5aYKOR0wX8
     API_URL: https://dev-bqp82821q78s4ipi.us.auth0.com/api/v2/
-    audience: https://articorp-api.com # E.g., https://articorp-api.com
+    audience: https://articorp-api.com
     scope: openid email profile
-  base_url: https://api.netlify.com # This is required for Netlify deploys
+  base_url: https://api.netlify.com
   branch: main
 # END: NEW BACKEND CONFIGURATION
 
-# ... (media_folder and collections sections remain the same below)
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "post"        # <--- A hyphen (-) must start this line
+  - name: "post"
     label: "Articles"
     folder: "_posts"
     create: true
