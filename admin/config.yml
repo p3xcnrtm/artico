@@ -1,22 +1,28 @@
-# START: NEW BACKEND CONFIGURATION
+# This is the corrected Decap CMS Configuration file.
+# The top-level keys MUST start at the first column.
 backend:
   name: github
-  repo: p3xcnrtm/artico # CORRECTED FORMAT
+  # Use the format: [GitHub Username]/[Repository Name]
+  repo: p3xcnrtm/artico
   auth_provider: auth0
- auth_config:
-  auth_url: https://{{ site.data.env.AUTH0_DOMAIN }}/authorize
-  app_id: {{ site.data.env.AUTH0_CLIENT_ID }}
-  API_URL: https://{{ site.data.env.AUTH0_DOMAIN }}/api/v2/
-  audience: {{ site.data.env.AUTH0_AUDIENCE }}
-  scope: openid email profile
+  # auth_config must be indented correctly under backend:
+  auth_config:
+    # Use environment variables set in Netlify to avoid exposing secrets
+    auth_url: https://{{ site.data.env.AUTH0_DOMAIN }}/authorize
+    app_id: {{ site.data.env.AUTH0_CLIENT_ID }}
+    API_URL: https://{{ site.data.env.AUTH0_DOMAIN }}/api/v2/
+    audience: {{ site.data.env.AUTH0_AUDIENCE }}
+    scope: openid email profile
   base_url: https://api.netlify.com
   branch: main
-# END: NEW BACKEND CONFIGURATION
 
+# These keys also MUST start at the first column:
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
+  # The hyphen (-) denotes the start of an array item and must be indented
+  # under the 'collections:' key.
   - name: "post"
     label: "Articles"
     folder: "_posts"
