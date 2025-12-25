@@ -1,22 +1,21 @@
+# START: NEW BACKEND CONFIGURATION
 backend:
-  name: git-gateway
-  branch: main # Or master, depending on your GitHub settings
+  name: github
+  repo: https://p3xcnrtm.github.io/artico/ # E.g., user/articorp-blog
+  auth_provider: auth0
+  auth_config:
+    auth_url: https://dev-bqp82821q78s4ipi.us.auth0.com/authorize # E.g., https://dev-xxxxx.us.auth0.com/authorize
+    app_id: EWGpqJNd2RbCUGTD28dW7b5aYKOR0wX8
+    API_URL: https://dev-bqp82821q78s4ipi.us.auth0.com/api/v2/
+    audience: https://articorp-api.com # E.g., https://articorp-api.com
+    scope: openid email profile
+  base_url: https://api.netlify.com # This is required for Netlify deploys
+  branch: main
+# END: NEW BACKEND CONFIGURATION
 
-media_folder: "assets/images" # Folder where images are saved
-public_folder: "/assets/images" # The path to load images from
+# ... (media_folder and collections sections remain the same below)
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
-  - name: "post"
-    label: "Articles"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
-      - {label: "Image Caption", name: "caption", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+  # ... (your existing collection structure)
