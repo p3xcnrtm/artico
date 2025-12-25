@@ -1,0 +1,22 @@
+<article class="article-container">
+    <div class="category">{{ page.category | upcase }}</div>
+    
+    <h1 class="headline">{{ page.title }}</h1>
+
+    <div class="meta-info">
+        By <span class="author">{{ page.author }}</span><br>
+        Posted on {{ page.date | date: "%B %d, %Y %H:%M" }}
+    </div>
+
+    {% if page.featured_image %}
+    <img src="{{ page.featured_image }}" alt="{{ page.title }}" class="featured-image">
+    <p class="caption">
+        {{ page.caption }}
+    </p>
+    {% endif %}
+
+    <div class="article-content">
+        {{ content }}
+    </div>
+</article>
+<hr style="margin: 40px 0; border: none; border-top: 1px dashed #eee;">
