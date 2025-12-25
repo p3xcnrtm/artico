@@ -1,4 +1,2 @@
 title: Artico
-description: A scrollable feed of all my articles.
-plugins:
-  - jekyll-feed
+description: All articles on one page.
